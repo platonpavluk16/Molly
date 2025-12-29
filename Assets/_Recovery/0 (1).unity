@@ -149,13 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProceduralMapGenerator
   player: {fileID: 1296742117}
-  chunkSize: 18
+  chunkSize: 10
   viewDistance: 4
   floorPrefab: {fileID: 747608443}
-  elements:
-  - name: rock
-    prefab: {fileID: 1897886445}
-    chance: 0.2
+  additionalObjects:
+  - prefab: {fileID: 710016612}
+    spawnChance: 0.01
 --- !u!4 &710016614
 Transform:
   m_ObjectHideFlags: 0
@@ -628,6 +627,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1322006862}
   - {fileID: 1296742117}
-  - {fileID: 710016614}
   - {fileID: 1897886447}
   - {fileID: 747608445}
+  - {fileID: 710016614}
