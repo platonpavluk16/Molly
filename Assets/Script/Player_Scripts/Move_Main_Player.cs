@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class Move_Main_Player : MonoBehaviour
 {
 
+    public int HP;
+
     void Update()
     {
         if(Keyboard.current.wKey.isPressed)
