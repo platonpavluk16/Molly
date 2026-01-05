@@ -4,25 +4,25 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
     public float lifeTime = 3f;
-    public float distance = 0.1f;
     public int damage = 3;
-
     public LayerMask whatIsSolid;
 
     private void Start()
     {
-        speed = BulletStatsManager.Instance.speed;
-        damage = BulletStatsManager.Instance.damage;
+        if (BulletStatsManager.Instance != null)
+        {
+            speed = BulletStatsManager.Instance.speed;
+            damage = BulletStatsManager.Instance.damage;
+        }
 
         Destroy(gameObject, lifeTime);
     }
 
     void Update()
     {
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        float moveDistance = speed * Time.deltaTime;
 
-        RaycastHit2D hitInfo =
-            Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, moveDistance + 0.1f, whatIsSolid);
 
         if (hitInfo.collider != null)
         {
@@ -36,6 +36,10 @@ public class Bullet : MonoBehaviour
             }
 
             Destroy(gameObject);
+        }
+        else
+        {
+            transform.Translate(Vector2.up * moveDistance);
         }
     }
 }

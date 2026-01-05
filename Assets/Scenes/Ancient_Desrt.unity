@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6127385126581031042, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
+      propertyPath: health
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -232,6 +236,10 @@ PrefabInstance:
     - target: {fileID: 1994073017378806246, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127385126581031042, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
+      propertyPath: health
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -546,6 +554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6127385126581031042, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
+      propertyPath: health
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -686,7 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54703ee937ad8074488bca30a26c87aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletStatsManager
-  damage: 3
+  damage: 1
   speed: 10
 --- !u!4 &1892315828 stripped
 Transform:
@@ -881,6 +893,10 @@ PrefabInstance:
     - target: {fileID: 1994073017378806246, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127385126581031042, guid: 30b2cf5f46b400749b1c906049b9dfee, type: 3}
+      propertyPath: health
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

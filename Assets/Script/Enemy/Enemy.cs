@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
-            float step = 2f * Time.deltaTime;
+            float step = 5f * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
         }
     }

@@ -11,11 +11,11 @@ public class PickUpTriggerFruits : MonoBehaviour
         Move_Main_Player player = collision.GetComponent<Move_Main_Player>();
         if (player == null) return;
 
-        player.HP += fruitHealthRestore;
+        player.hp += fruitHealthRestore;
 
-        if (player.HP > 100)
+        if (player.hp > 100)
         {
-            player.HP = 100;
+            player.hp = 100;
         }
 
         Debug.Log("Fruit picked up! Restored " + fruitHealthRestore + " HP.");
