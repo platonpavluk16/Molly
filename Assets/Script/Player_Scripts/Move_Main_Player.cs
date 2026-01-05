@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Move_Main_Player : MonoBehaviour
 {
+
+    public int hp = 100;
 
     void Update()
     {
@@ -23,4 +26,24 @@ public class Move_Main_Player : MonoBehaviour
             transform.Translate(Vector3.right * Time.deltaTime * 5);
         }
     }
+
+        void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            TakeDamage(20);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0 )
+        {
+            SceneManager.LoadScene("Main_Map");
+        }
+    }
+
+    
 }
